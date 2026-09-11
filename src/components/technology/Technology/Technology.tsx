@@ -40,7 +40,7 @@ const Technology = ({ technologyPromise }: PropsType) => {
           ))}
         </div>
         <div className="md:col-span-3 w-full mt-2.5 md:mt-0">
-        <SelectedTechnology selectedTechnology={selectedTechnology} />
+        <SelectedTechnology selectedTechnology={selectedTechnology} setSelectedTechnology = {setSelectedTechnology} />
         </div>
       </div>
     </div>
