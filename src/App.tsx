@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Technology from "./components/technology/Technology/Technology";
 import type { TechnologyType } from "./types/TechnologyType";
+import Footer from "./components/Footer";
 
 function App() {
   //! LOAD DATA FROM API
@@ -22,6 +23,7 @@ function App() {
           <Technology technologyPromise={technologyPromise()} />
         </Suspense>
       </main>
+      <Footer/>
     </>
   );
 }

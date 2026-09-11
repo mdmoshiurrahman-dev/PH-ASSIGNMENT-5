@@ -19,7 +19,7 @@ const SelectedTechnologyCard = ({
   };
 
   return (
-    <div className="flex justify-between border-[1.5px] border-gray-400 p-2.5 rounded-[10px] mb-[10px]">
+    <div className="flex justify-between border-[1.5px] border-gray-400 p-2.5 rounded-[10px] mb-2.5">
       <div className="flex gap-5 items-center">
         <div>
           <img
