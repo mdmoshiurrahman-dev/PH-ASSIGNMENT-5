@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Technology from "./components/technology/Technology/Technology";
 import type { TechnologyType } from "./types/TechnologyType";
 import Footer from "./components/Footer";
+import { Fallback } from "./components/Fallback";
 
 function App() {
   //! LOAD DATA FROM API
@@ -19,7 +20,7 @@ function App() {
         <Hero />
       </header>
       <main>
-        <Suspense>
+        <Suspense fallback = {<Fallback/>}>
           <Technology technologyPromise={technologyPromise()} />
         </Suspense>
       </main>
