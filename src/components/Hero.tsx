@@ -16,10 +16,10 @@ const Hero = () => {
             project.
           </p>
           <div className="grid grid-cols-2 gap-2.5 md:w-full">
-            <button className="ml-2.5 bg-linear-to-r from bg-orange-400 via-pink-400 to-purple-400  py-2.5 px-[2.5] text-white rounded-lg mb-2.5">
+            <button className="cursor-pointer ml-2.5 bg-linear-to-r from bg-orange-400 via-pink-400 to-purple-400  py-2.5 px-[2.5] text-white rounded-lg mb-2.5">
               Explore Technologies
             </button>
-            <button className="mr-2.5 px-2.5 py-2.5 rounded-lg border mb-2.5">
+            <button className="mr-2.5 px-2.5 py-2.5 rounded-lg border mb-2.5 cursor-pointer">
               Learn More
             </button>
           </div>
