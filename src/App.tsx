@@ -18,6 +18,7 @@ function App() {
   const handelButtonState = (): void => {
     setButton(!button);
   };
+  const [promiseData] = useState<Promise<TechnologyType[]>>(technologyPromise);
   return (
     <>
       <header>
@@ -27,7 +28,7 @@ function App() {
       </header>
       <main>
         <Suspense fallback={<Fallback />}>
-          <Technology technologyPromise={technologyPromise()} />
+          <Technology technologyPromise={promiseData} />
         </Suspense>
       </main>
       <Footer />
