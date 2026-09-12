@@ -2,6 +2,7 @@ import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../../../types/TechnologyType";
 import SelectedTechnologyCard from "./SelectedTechnologyCard";
 import SelectedTechnologyEmptyCard from "./SelectedTechnologyEmptyCard";
+import { toast } from "react-toastify";
 
 export interface SelectedTechnologyProps {
   selectedTechnology: TechnologyType[];
@@ -41,7 +42,9 @@ const SelectedTechnology = ({
       <div
         className={`${selectedTechnology.length > 0 ? "block" : "hidden"} w-full flex justify-center`}
       >
-        <button onClick={()=> setSelectedTechnology([])} className="cursor-pointer border-2 p-2 mt-2.5 rounded-[10px] font-bold text-red-500 md:text-[18px] w-full">
+        <button onClick={()=> {setSelectedTechnology([]);
+         toast.error(`All items successfully removed from your cart!`)
+        }} className="cursor-pointer border-2 p-2 mt-2.5 rounded-[10px] font-bold text-red-500 md:text-[18px] w-full">
           Remove All
         </button>
       </div>

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import type { TechnologyType } from "../../../types/TechnologyType";
 import { FaCheck } from "react-icons/fa";
 export interface TechnologyCardProps {
@@ -12,11 +13,13 @@ const TechnologyCard = ({
   isSelected,
 }: TechnologyCardProps) => {
   return (
-        <div className="flex flex-col border rounded-[10px] p-3.5 mx-2 justify-between border-gray-100/80
+    <div
+      className="flex flex-col border rounded-[10px] p-3.5 mx-2 justify-between border-gray-100/80
             shadow-sm shadow-gray-200/50 
             transition-all duration-300 ease-in-out
-            hover:shadow-xl hover:shadow-gray-300/40 hover:-translate-y-1">
-    <div className="flex justify-between items-center">
+            hover:shadow-xl hover:shadow-gray-300/40 hover:-translate-y-1"
+    >
+      <div className="flex justify-between items-center">
         <div className="max-w-11 w-full">
           <img
             className="w-full h-auto block"
@@ -68,6 +71,7 @@ const TechnologyCard = ({
         <div className="w-full flex justify-center mt-3.75">
           <button
             onClick={() => {
+              toast.success(`${technology.name} successfully added to your cart!`);
               handelSelectedTechnology(technology);
             }}
             disabled={isSelected}
