@@ -1,4 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import NavLogo from '../../assets/logo-text.png'
 interface NavProps {
   handelButtonState: () => void;
 }
@@ -15,7 +16,7 @@ const Nav = ({ handelButtonState }: NavProps) => {
         <div>
           <img
             className="lg:w-28 w-25"
-            src="../../assets/logo-text.png"
+            src={NavLogo}
             alt=""
           />
         </div>

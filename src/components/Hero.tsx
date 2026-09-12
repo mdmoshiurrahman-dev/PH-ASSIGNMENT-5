@@ -1,4 +1,4 @@
-
+import BannerImage from '../../assets/banner-stack.png'
 const Hero = () => {
   return (
     <div>
@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="overflow-hidden">
           <img
             className="lg:w-95"
-            src="../../assets/banner-stack.png"
+            src= {BannerImage}
             alt=""
           />
         </div>

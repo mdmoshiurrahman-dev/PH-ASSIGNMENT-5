@@ -11,7 +11,7 @@ import SideToggle from "./components/SideToggle";
 function App() {
   //! LOAD DATA FROM API
   const technologyPromise = async (): Promise<TechnologyType[]> => {
-    const response = await fetch("../public/data.json");
+    const response = await fetch("/data.json");
     return await response.json();
   };
   const [button, setButton] = useState<boolean>(false);
