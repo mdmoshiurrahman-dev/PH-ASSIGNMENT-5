@@ -1,19 +1,16 @@
-import { useState } from "react";
 import type { TechnologyType } from "../../../types/TechnologyType";
 import { FaCheck } from "react-icons/fa";
 export interface TechnologyCardProps {
   technology: TechnologyType;
-  handelSelectedTechnology:(technology:TechnologyType)=> void
+  handelSelectedTechnology: (technology: TechnologyType) => void;
+  isSelected: boolean;
 }
 
-const TechnologyCard = ({ technology, handelSelectedTechnology }: TechnologyCardProps) => {
-  //! STATE DECLARATION--
-
-  const [button, setButton] = useState(true);
-  const handelButtonState = () => {
-    setButton(!button);
-  };
-
+const TechnologyCard = ({
+  technology,
+  handelSelectedTechnology,
+  isSelected,
+}: TechnologyCardProps) => {
   return (
     <div className="flex flex-col border rounded-[10px] p-3.5 mx-2 justify-between">
       <div className="flex justify-between items-center">
@@ -67,11 +64,13 @@ const TechnologyCard = ({ technology, handelSelectedTechnology }: TechnologyCard
         </div>
         <div className="w-full flex justify-center mt-3.75">
           <button
-            onClick={() => {handelButtonState(), handelSelectedTechnology(technology)}}
-            disabled={!button}
-            className={`text-white bg-black w-full p-2 font-semibold rounded-[7px] ${button ? "cursor-pointer" : "cursor-not-allowed bg-gray-200 text-black"}`}
+            onClick={() => {
+              handelSelectedTechnology(technology);
+            }}
+            disabled={isSelected}
+            className={`text-white bg-black w-full p-2 font-semibold rounded-[7px] ${!isSelected ? "cursor-pointer" : "cursor-not-allowed bg-gray-200 text-black"}`}
           >
-            {button ? (
+            {!isSelected ? (
               <span className="text-white">
                 <FaCheck className="inline" /> Add to Stack
               </span>

@@ -36,7 +36,7 @@ const Technology = ({ technologyPromise }: PropsType) => {
       <div className="grid grid-cols-1 md:grid-cols-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lx:grid-cols-4 gap-3.75 md:col-span-9">
           {data.map((t) => (
-            <TechnologyCard key={t.id} technology={t} handelSelectedTechnology = {handelSelectedTechnology} ></TechnologyCard>
+            <TechnologyCard key={t.id} technology={t} handelSelectedTechnology = {handelSelectedTechnology} isSelected={selectedTechnology.some((item) => item.id === t.id)} ></TechnologyCard>
           ))}
         </div>
         <div className="md:col-span-3 w-full mt-2.5 md:mt-0">

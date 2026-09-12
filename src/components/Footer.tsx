@@ -2,9 +2,9 @@ import FooterImage from "../../assets/logo-text.png";
 const Footer = () => {
   return (
     <div className="container mx-auto">
-      <div>
-        <div>
-          <div className="flex flex-col gap-2">
+      <div className="mt-10">
+        <div className="flex gap-3.75">
+          <div className="flex flex-col gap-2 p-2">
             <div className="flex justify-center mt-3.75 md:justify-start">
               <img className="max-w-full" src={FooterImage} alt="" />
             </div>
@@ -29,10 +29,10 @@ const Footer = () => {
             </div>
           </div>
           {/* //!-------------------- added something for desktop responsive */}
-          <div className="flex gap-2.5">
+          <div className="md:flex md:gap-2.5 md:w-full md:justify-evenly hidden">
             <div>
-              <h2>PRODUCT</h2>
-              <ul>
+              <h2 className="font-bold text-gray-600 mb-2">PRODUCT</h2>
+              <ul className="text-gray-500">
                 <li>
                   <a href="">Home</a>
                 </li>
@@ -45,8 +45,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2>COMPANY</h2>
-              <ul>
+              <h2 className="font-bold text-gray-600 mb-2">COMPANY</h2>
+              <ul className="text-gray-500">
                 <li>
                   <a href="">About</a>
                 </li>
@@ -59,8 +59,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2>LEGAL</h2>
-              <ul>
+              <h2 className="font-bold text-gray-600 mb-2">LEGAL</h2>
+              <ul className="text-gray-500">
                 <li>
                   <a href="">Privacy Policy</a>
                 </li>
@@ -88,7 +88,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        ;
       </div>
     </div>
   );
