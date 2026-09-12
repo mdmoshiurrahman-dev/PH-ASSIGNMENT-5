@@ -1,7 +1,17 @@
-const Nav = () => {
+import { GiHamburgerMenu } from "react-icons/gi";
+interface NavProps {
+  handelButtonState: () => void;
+}
+const Nav = ({ handelButtonState }: NavProps) => {
   return (
     <nav className="sticky top-0 bg-white">
       <div className="flex justify-between container mx-auto items-center p-1 lg:p-2 md:p-1.5 border-b border-gray-300">
+        <div
+          className="md:hidden p-2 cursor-pointer"
+          onClick={handelButtonState}
+        >
+          <GiHamburgerMenu />
+        </div>
         <div>
           <img
             className="lg:w-28 w-25"
